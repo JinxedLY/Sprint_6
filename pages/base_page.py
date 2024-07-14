@@ -15,13 +15,12 @@ class BasePage:
 
     @allure.step('Ждем пока элемент прогрузится')
     def wait_thing(self, locator):
-        return WebDriverWait(self.driver, 15).until(expected_conditions.element_to_be_clickable(locator))
+        return WebDriverWait(self.driver, 30).until(expected_conditions.element_to_be_clickable(locator))
 
     @allure.step('Клик по элементу')
     def click_thing(self, locator):
         element = self.wait_thing(locator)
         self.driver.execute_script("arguments[0].scrollIntoView();", element)
-        self.driver.execute_script("arguments[0].style.border='3px solid red'", element)
         time.sleep(1)
         element.click()
 

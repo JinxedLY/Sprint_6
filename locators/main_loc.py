@@ -5,6 +5,8 @@ class MainPageLoc:
     order_button_body = (By.XPATH, ".//div[starts-with(@class, 'Home')]/button[text()='Заказать']")
     order_button_head = (By.XPATH, '//div[@class = "Header_Nav__AGCXC"]/button[text() = "Заказать"]')
     accept_cookie_button = (By.ID, 'rcc-confirm-button')
+    logo_ya = (By.CSS_SELECTOR, 'a[target="_blank"][href*="//yandex.ru"]')
+    logo_scooter = (By.CSS_SELECTOR, 'a[href="/"] img[alt="Scooter"]')
 
     question = {
         1: (By.ID, "accordion__heading-0"),

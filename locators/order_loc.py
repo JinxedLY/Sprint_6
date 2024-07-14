@@ -16,3 +16,4 @@ class OrderPageLoc:
     order_button = (By.XPATH, "//div[contains(@class, 'Order_Buttons')]/button[text()='Заказать']")
     confirm_button = (By.XPATH, "//button[text()='Да']")
     check_status_button = (By.XPATH, "//button[text()='Посмотреть статус']")
+

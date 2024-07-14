@@ -1,5 +1,6 @@
 import allure
 from locators.main_loc import MainPageLoc
+from locators.dzen_loc import DzenLoc
 from pages.base_page import BasePage
 
 
@@ -28,3 +29,15 @@ class ScooterMainPage(BasePage):
     @allure.step('Клац по кнопке заказа в теле')
     def order_from_body(self):
         self.click_thing(MainPageLoc.order_button_body)
+
+    @allure.step('Клац по лого Яндекса')
+    def poke_yandex(self):
+        self.click_thing(MainPageLoc.logo_ya)
+
+    @allure.step('Клац по лого Самоката')
+    def poke_scooter(self):
+        self.click_thing(MainPageLoc.logo_scooter)
+
+    @allure.step('Проверка наличии кнопки поиска Дзен')
+    def dzen_button_check(self):
+        return self.wait_thing(DzenLoc.dzen_find_button).is_displayed()
