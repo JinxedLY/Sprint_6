@@ -38,3 +38,8 @@ class BasePage:
     def switch_to_the_new_tab(self):  # Переключить на новую вкладку
         self.driver.switch_to.window(self.driver.window_handles[1])
 
+    @allure.step('Отправляем значение в поле')
+    def send_keys(self, locator, value):
+        element = self.wait_thing(locator)
+        element.send_keys(value)
+

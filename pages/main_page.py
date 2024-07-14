@@ -20,3 +20,7 @@ class ScooterMainPage(BasePage):
     def get_faq_answer(self, question, answer):
         self.click_on_question(question)
         return self.read_thing(answer)
+
+    @allure.step('Клац по кнопке заказа в шапке')
+    def order_from_header(self):
+        self.click_thing(MainPageLoc.order_button_head)
