@@ -3,6 +3,7 @@ from conftest import driver
 from pages.main_page import ScooterMainPage
 from stuff.pathways import Pathways
 
+
 class TestNavigation:
     @allure.title('Проверка навигации при клике на лого яндекса')
     @allure.description('Кликаем на лого яндекса и проверяем оказались ли мы на странице дзена')
@@ -14,7 +15,8 @@ class TestNavigation:
         assert main_page.dzen_button_check()
 
     @allure.title('Проверка навигации при клике на лого самоката')
-    @allure.description('Уходим с главной страницы, кликаем на лого самоката и проверяем оказались ли мы на главной странице')
+    @allure.description(
+        'Уходим с главной страницы, кликаем на лого самоката и проверяем оказались ли мы на главной странице')
     def test_click_scooter_logo_redirect_to_base_path_success(self, driver):
         main_page = ScooterMainPage(driver)
         main_page.go_to_site()
