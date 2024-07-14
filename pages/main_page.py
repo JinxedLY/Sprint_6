@@ -24,3 +24,7 @@ class ScooterMainPage(BasePage):
     @allure.step('Клац по кнопке заказа в шапке')
     def order_from_header(self):
         self.click_thing(MainPageLoc.order_button_head)
+
+    @allure.step('Клац по кнопке заказа в теле')
+    def order_from_body(self):
+        self.click_thing(MainPageLoc.order_button_body)

@@ -42,4 +42,3 @@ class BasePage:
     def send_keys(self, locator, value):
         element = self.wait_thing(locator)
         element.send_keys(value)
-

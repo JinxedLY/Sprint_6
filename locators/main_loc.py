@@ -2,7 +2,6 @@ from selenium.webdriver.common.by import By
 
 
 class MainPageLoc:
-
     order_button_body = (By.XPATH, ".//div[starts-with(@class, 'Home')]/button[text()='Заказать']")
     order_button_head = (By.XPATH, '//div[@class = "Header_Nav__AGCXC"]/button[text() = "Заказать"]')
     accept_cookie_button = (By.ID, 'rcc-confirm-button')
